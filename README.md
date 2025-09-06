@@ -16,4 +16,4 @@ Spots is an image sharing platform that utalizes responisive design to create th
 
 This webpage is deployed to Github Pages
 
-- Deployment Link:
+- Deployment Link: https://gnesbitt98.github.io/se_project_spots/
