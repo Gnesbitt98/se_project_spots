@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 0 10px;
 }
 
 .modal_is-opened {
@@ -21,6 +21,7 @@
 }
 
 .modal__container {
+  box-sizing: border-box;
   max-width: 730px;
   width: 100%;
   border-radius: 8px;
@@ -93,7 +94,7 @@
 @media screen and (max-width: 627px) {
   .modal__container {
     max-width: 300px;
-    height: 336px;
+    max-height: 100%;
   }
 
   .modal__title {
@@ -105,8 +106,6 @@
   }
 
   .modal__input {
-    display: block;
-    width: 100%;
     max-width: 100%;
     box-sizing: border-box;
   }
