@@ -73,6 +73,10 @@
   color: #212121;
 }
 
+.modal__input:hover {
+  opacity: 100%;
+}
+
 .modal__input::placeholder {
   color: #2121214d;
 }
