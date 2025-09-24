@@ -63,6 +63,7 @@
 }
 
 .modal__input {
+  box-sizing: border-box;
   display: block;
   margin: 8px 0 0;
   width: 100%;
@@ -97,8 +98,12 @@
 
 @media screen and (max-width: 627px) {
   .modal__container {
-    max-width: 300px;
-    max-height: 100%;
+    padding: 22px 12px 12px;
+  }
+
+  .modal__close-button {
+    top: 12px;
+    right: 12px;
   }
 
   .modal__title {
