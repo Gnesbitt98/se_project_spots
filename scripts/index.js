@@ -122,6 +122,7 @@ function handleNewPostSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardList.prepend(cardElement);
   closeModal(profileAddModal);
+  evt.target.reset();
 }
 
 // Attach Form Listeners

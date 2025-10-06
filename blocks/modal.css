@@ -158,6 +158,11 @@
   .modal__submit-button {
     max-width: 100%;
   }
+
+  .modal__close-button_type_preview {
+    top: -30px;
+    right: 0;
+  }
 }
 
 /*placed below to avoid override*/

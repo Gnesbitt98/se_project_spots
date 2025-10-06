@@ -9,6 +9,10 @@
   border-radius: 8px;
 }
 
+.card__image:hover {
+  cursor: pointer;
+}
+
 .card__content {
   display: flex;
   padding-top: 12px;
@@ -63,6 +67,7 @@
 
 .card__delete-button:hover {
   background-image: url(../images/delete-button-hover.svg);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
