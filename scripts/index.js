@@ -69,15 +69,39 @@ const cardTemplate = document
   .content.querySelector(".card");
 
 const cardList = document.querySelector(".cards__list");
+const cardSubmitButton = profileAddModal.querySelector(".modal__submit-button");
 
 // Modal Helpers
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscClose);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscClose);
 }
+
+// Close on overlay click
+function handleOverlayClick(evt) {
+  if (evt.target.classList.contains("modal_is-opened")) {
+    closeModal(evt.target);
+  }
+}
+
+// Close on Escape key
+function handleEscClose(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal_is-opened");
+    if (openModal) closeModal(openModal);
+  }
+}
+
+// Add listeners for all modals
+const allModals = document.querySelectorAll(".modal");
+allModals.forEach((modal) => {
+  modal.addEventListener("mousedown", handleOverlayClick);
+});
 
 // Profile Modal Listeners
 profileEditButton.addEventListener("click", () => {
@@ -123,6 +147,7 @@ function handleNewPostSubmit(evt) {
   cardList.prepend(cardElement);
   closeModal(profileAddModal);
   evt.target.reset();
+  disableButton(cardSubmitButton, settings);
 }
 
 // Attach Form Listeners
