@@ -232,8 +232,6 @@ function handleCardSubmit(evt) {
 editAvatarForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
 
-  //Change text content to "Saving..."
-
   api
     .editUserAvatar({ avatar: editAvatarInput.value })
     .then((data) => {
